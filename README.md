@@ -52,7 +52,9 @@ Save one template for technical notes. Use `{date}`, `{time}` and `{offset}` onc
 
 ## Install
 
-This version is prepared for review. A community listing is not part of this build. For manual installation, copy `main.js`, `manifest.json` and `styles.css` from the release files into `<vault>/.obsidian/plugins/epoch-note-converter/`. Open Community plugins in settings and enable Epoch Note Converter. The minimum supported app version is 1.13.4.
+Open Settings, Community plugins, Browse. Search for "Epoch Note Converter". Select Install, then Enable.
+
+For manual installation, copy `main.js`, `manifest.json` and `styles.css` from the release files into `<vault>/.obsidian/plugins/epoch-note-converter/`. Open Community plugins in settings and enable Epoch Note Converter. The minimum supported app version is 1.13.4.
 
 ## Usage
 
@@ -63,6 +65,8 @@ Apply the chosen result with one of the two edit buttons. Cancel closes the prev
 For a Pro column, select the timestamp text across adjacent lines. Blank rows, Markdown table separators and extra columns are not accepted. Trim those parts from the selection before the command. The unit applies to the column; mixed seconds and milliseconds need separate runs.
 
 ## Settings
+
+After a minor or major update, this plugin opens one What's new tab in the background. The tab and settings card suggest other NoteMods plugins and Zovo Chat and link to notemods.com for feedback ([privacy](https://notemods.com/privacy/)). The tab sends no data. Turn the tab off in Settings.
 
 The settings tab has the GitHub Sponsors account controls and the two saved Pro options. Conversion of a single timestamp needs no setup. Saved time zones use comma-separated names, such as `UTC, Asia/Bangkok, America/New_York`. Duplicate names are removed. An empty field gives no extra comparison rows.
 

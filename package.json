@@ -1,6 +1,6 @@
 {
 	"name": "epoch-note-converter",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"private": true,
 	"description": "Convert a selected Unix timestamp into an explicit UTC or local date and time.",
 	"main": "main.js",

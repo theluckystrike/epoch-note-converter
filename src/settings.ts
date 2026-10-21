@@ -3,6 +3,7 @@ import { sponsorsSettingItems } from './license/github-obsidian';
 import { ISO_FORMAT, validFormat, validZone } from './converter';
 import { isPro, PRO_UI } from './pro';
 import type EpochNoteConverterPlugin from './main';
+import { helloSettingItems } from './hello/settings';
 
 export interface EpochNoteConverterSettings {
 	zones: string;
@@ -22,6 +23,11 @@ export class EpochNoteConverterSettingTab extends PluginSettingTab {
 		super(app, owner);
 	}
 	getSettingDefinitions(): SettingDefinitionItem[] {
+		// The product rows, then the "More from NoteMods" card (packages/hello).
+		return [...this.productSettingDefinitions(), ...helloSettingItems()];
+	}
+
+	productSettingDefinitions(): SettingDefinitionItem[] {
 		return [
 			...(this.owner.pro ? sponsorsSettingItems(this.owner.pro, PRO_UI) : []),
 			{ name: PRO_UI.zoneHeading, desc: 'Comma-separated IANA names, up to six. Unsupported names are removed when saved.', control: { disabled: () => !isPro(), type: 'text', key: 'zones', defaultValue: DEFAULT_SETTINGS.zones } },
