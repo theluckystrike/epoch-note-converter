@@ -1,7 +1,6 @@
 {
 	"name": "epoch-note-converter",
-	"repository": {"type": "git", "url": "theluckystrike/epoch-note-converter.git"},
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"private": true,
 	"description": "Convert a selected Unix timestamp into an explicit UTC or local date and time.",
 	"main": "main.js",

@@ -1,7 +1,7 @@
 import { Notice, Plugin, type Editor } from 'obsidian';
 import type { SponsorsManager } from './license/index';
 import { createGitHubSponsors } from './license/github-obsidian';
-import { SPONSORS, PRO_UI, bindPro, isPro, resetPro } from './pro';
+import { SPONSORS, PRO_UI, bindPro, isPro, proNotice, resetPro } from './pro';
 import { DEFAULT_SETTINGS, EpochNoteConverterSettingTab, normalizeSettings, type EpochNoteConverterSettings } from './settings';
 import { snapshot } from './edit';
 import { ConverterModal } from './modal';
@@ -35,7 +35,7 @@ export default class EpochNoteConverterPlugin extends Plugin {
 
 	openConverter(editor: Editor, batch = false): void {
 		if (batch && !isPro()) {
-			new Notice(PRO_UI.columnNotice);
+			proNotice(PRO_UI.columnNotice);
 			return;
 		}
 		if (editor.listSelections().length !== 1 || !editor.getSelection()) {

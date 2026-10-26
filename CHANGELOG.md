@@ -1,5 +1,11 @@
 # epoch-note-converter
 
+## 1.1.1
+
+### Patch Changes
+
+- The Pro notice for column conversion now has a Sponsor on GitHub button.
+
 ## 1.1.0
 
 ### Minor Changes
